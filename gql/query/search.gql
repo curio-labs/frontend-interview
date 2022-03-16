@@ -1,0 +1,26 @@
+query Search($text: String!) {
+  search(q: $text) {
+    story {
+      id
+      title
+      description
+      imageUrl
+      thumbnailImageUrl
+      publishedAt
+      media {
+        duration
+        mp3Url
+      }
+      provider {
+        ... on Publication {
+          name
+          imageUrl
+        }
+        ... on Thinker {
+          name
+          imageUrl
+        }
+      }
+    }
+  }
+}
