@@ -71,7 +71,6 @@ Type of the response:
 ```
 export type Response = {
     data?: Publication[];
-} | {
     error?: string
 }
  
